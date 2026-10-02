@@ -294,13 +294,27 @@ skill that lets the agent look up any WWDC session. It reads summaries from
 The summaries are written by AI, not by Apple, so use them to find the right
 session and check details against Apple's own video.
 
-Install for Claude Code:
+I find this great when I am working with the new frameworks from WWDC, the
+ones too new for the agent to know well.
+
+This is one I install project by project, not globally. I like most of my
+skills global because it is easier, but I only want this one in the projects
+that use the new frameworks.
+
+Install for one project with Claude Code. Go to the project's folder first,
+then run:
+
+```
+npx skills add https://github.com/superwall/skills --skill wwdc --agent claude-code
+```
+
+If you would rather have it everywhere, this is the command Superwall
+publishes, which installs it globally:
 
 ```
 npx skills add https://github.com/superwall/skills --skill wwdc --global --agent claude-code universal
 ```
 
-The command above is the one Superwall publishes, and it is for Claude Code.
 For other tools, see the instructions in Superwall's repository.
 
 ### App Store Connect and releases
