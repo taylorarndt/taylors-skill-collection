@@ -311,6 +311,9 @@ first time. If you ship on Android, the same marketplace has a second plugin,
 
 Places to learn about skills and find more of them:
 
+- [claude-watch](https://github.com/taylorarndt/claude-watch). **Mine.** Not a
+  skill, but a tool I made that tells you when a Claude Code session is waiting
+  on you.
 - [Swift-Agent-Skills](https://github.com/twostraws/Swift-Agent-Skills). By
   Paul Hudson. A curated directory of open-source skills for Swift and Apple
   platform development, from many authors.
