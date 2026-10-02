@@ -37,8 +37,10 @@ I grouped the skills by category, and every one is marked as one of two kinds:
 
 ## Why this exists
 
-It started with a question I get a lot: "What skills do you use?" I never had
-a good place to point people, so I made one.
+It started with a question I get a lot: "What skills do you use?" People also
+wanted the skills I had made, and my problem was that I had nowhere to put
+them. They only existed on my own computer. So I made this place, where I can
+show what I use and share what I built.
 
 It is also where my own skills live. I wrote my first one after setting up
 [claude-watch](https://github.com/taylorarndt/claude-watch) by hand, one
@@ -117,6 +119,26 @@ and my choices throughout. Read
 [SKILL.md](skills/opensource-project-init/SKILL.md) and change those to yours
 before you rely on it. The templates it copies from are in
 [skills/opensource-project-init/assets](skills/opensource-project-init/assets).
+
+### All the Swift skills in one place
+
+#### Swift Agent Skills
+
+By Paul Hudson.
+[Swift-Agent-Skills](https://github.com/twostraws/Swift-Agent-Skills). If you
+build for Apple platforms, start here. This is one repository that gathers
+open-source Swift skills from many authors, sorted by topic: SwiftUI,
+SwiftData, Swift concurrency, Swift Testing, the Swift language,
+accessibility, App Intents, the App Store, architecture, Core Data,
+performance, security, widgets, and more.
+
+There is nothing to install from it directly. It is a list, and each skill
+links to its author's repository with its own install steps. Paul says it
+plainly and I agree: being listed is not an endorsement, so read a skill and
+make sure you trust the author before you install it.
+
+The four skills below are Paul's own, and they are the ones from that list I
+have installed.
 
 ### SwiftUI
 
@@ -233,6 +255,35 @@ With Xcode 27.0 the export gives ten skills:
 These belong to Apple, so I do not copy them into this repository. Export them
 from your own copy of Xcode.
 
+### Core AI and on-device models
+
+#### Core AI skills
+
+By Apple. [apple/coreai-models](https://github.com/apple/coreai-models). Three
+skills that teach the agent how to get a PyTorch model running on iPhone,
+iPad, and Mac with Core AI:
+
+- `working-with-coreai`: the whole path from exporting a model to running it
+  on Apple silicon
+- `model-authoring`: rules for writing PyTorch models that run well on device
+- `model-compression-exploration`: trying out ways to shrink a model's weights
+
+Install for Claude Code, typed inside Claude Code:
+
+```
+/plugin marketplace add git@github.com:apple/coreai-models.git
+/plugin install coreai-skills@coreai-models
+```
+
+Install for Codex, from the terminal:
+
+```
+codex plugin marketplace add https://github.com/apple/coreai-models
+```
+
+Then start Codex, type `/plugins`, find the `coreai-models` marketplace,
+select `coreai-skills`, and install it.
+
 ### WWDC sessions
 
 #### wwdc
@@ -329,8 +380,10 @@ about skills and find more of them:
   skill, but a tool I made that tells you when a Claude Code session is waiting
   on you.
 - [Swift-Agent-Skills](https://github.com/twostraws/Swift-Agent-Skills). By
-  Paul Hudson. A curated directory of open-source skills for Swift and Apple
-  platform development, from many authors.
+  Paul Hudson. The directory of Swift skills from many authors, described
+  under [All the Swift skills in one place](#all-the-swift-skills-in-one-place).
+- [Paul Hudson's video on installing and using agent skills](https://www.youtube.com/watch?v=nKVZBKoB6P4).
+  Covers Xcode, Claude Code, Codex, and more.
 - [skills.sh](https://skills.sh). A directory of skills that install with the
   `npx skills add` command used on this page.
 - [Claude Code skills documentation](https://code.claude.com/docs/en/skills).
