@@ -1,23 +1,27 @@
 # Taylor's Skill Collection
 
-Welcome to my skill collection.
+Hi, I'm Taylor. Welcome to my skill collection.
 
-This repository has the skills I made and the skills from other people that I
-find useful. I use many of them every day. For each one, this page says who
-made it, what it is helpful for, and how to install it.
+People keep asking me which skills I use, so I decided to show them here
+instead of answering one message at a time.
 
-A skill is a folder of instructions that an AI coding tool such as
-[Claude Code](https://claude.com/claude-code) or Codex loads when a task
-matches, so it does the job a particular way without being told again each
-time.
+You will find two things on this page: the skills I use from other people, and
+the skills I created myself. I use many of them every day. For each one I tell
+you who made it, what I find it helpful for, and how to install it, so you can
+try it too.
 
-The skills are grouped by category. There are two kinds:
+If skills are new to you: a skill is a folder of instructions that an AI
+coding tool such as [Claude Code](https://claude.com/claude-code) or Codex
+picks up when a task matches. It is how you teach the tool to do a job your
+way once, instead of explaining it again every time.
 
-- **Mine.** Skills I wrote. They live in this repository, in the
-  [skills](skills) folder.
+I grouped the skills by category, and every one is marked as one of two kinds:
+
+- **Mine.** Skills I wrote. They live right here, in the [skills](skills)
+  folder.
 - **By someone else.** Skills other people wrote that I like and use. I do not
-  copy them here. I link to the author's own repository, so you get their
-  latest version and they get the credit.
+  copy their work into this repository. I link to the author's own repository,
+  so you always get their latest version and they get the credit they deserve.
 
 ## Contents
 
@@ -33,15 +37,22 @@ The skills are grouped by category. There are two kinds:
 
 ## Why this exists
 
-I kept explaining the same steps to Claude every time I set up a project. After
-setting up [claude-watch](https://github.com/taylorarndt/claude-watch) by hand,
-one request at a time, I wrote the steps down as a skill so the next project
-comes out the same. This repository is where my skills live, next to links to
-the skills from other people that I rely on, so it is all in one place.
+It started with a question I get a lot: "What skills do you use?" I never had
+a good place to point people, so I made one.
+
+It is also where my own skills live. I wrote my first one after setting up
+[claude-watch](https://github.com/taylorarndt/claude-watch) by hand, one
+request at a time. I was tired of explaining the same steps to Claude for every
+new project, so I wrote them down as a skill, and now the next project comes
+out the same without me repeating myself.
+
+Most of what I use was made by other people, though, and I want to be clear
+about that. Good skills take real work. This page is my way of sharing what
+works for me and sending you to the people who built it.
 
 ## Before you start
 
-Three things are true for every skill on this page:
+A few things that will save you some trouble, whichever skill you pick:
 
 - **Where skills go.** Claude Code reads skills from `~/.claude/skills`. Codex
   reads them from `~/.codex/skills`. Each skill is one folder with a
@@ -64,8 +75,9 @@ terminal.
 
 #### opensource-project-init
 
-**Mine.** How I take a folder of working code and turn it into an open-source
-repository on GitHub, start to finish. It covers:
+**Mine.** This is how I take a folder of working code and turn it into an
+open-source repository on GitHub, start to finish. I used it to set up this
+very repository. It covers:
 
 - A secrets scan and a `.gitignore` before anything is pushed
 - A private repository first, made public only on request
@@ -100,7 +112,8 @@ Install for Codex:
 cp -R taylors-skill-collection/skills/opensource-project-init ~/.codex/skills/
 ```
 
-The skill names me, my GitHub account, and my choices throughout. Read
+A heads up: I wrote this skill for myself, so it names me, my GitHub account,
+and my choices throughout. Read
 [SKILL.md](skills/opensource-project-init/SKILL.md) and change those to yours
 before you rely on it. The templates it copies from are in
 [skills/opensource-project-init/assets](skills/opensource-project-init/assets).
@@ -309,7 +322,8 @@ first time. If you ship on Android, the same marketplace has a second plugin,
 
 ## Resources
 
-Places to learn about skills and find more of them:
+If you want to go further, these are the places I would send you to learn
+about skills and find more of them:
 
 - [claude-watch](https://github.com/taylorarndt/claude-watch). **Mine.** Not a
   skill, but a tool I made that tells you when a Claude Code session is waiting
@@ -331,16 +345,17 @@ Places to learn about skills and find more of them:
 
 ## Have a skill I should try
 
-If you made a skill, or you use one you think I would like, tell me about it.
-Open a
+I am always looking for good skills. If you made one, or you use one you think
+I would like, please tell me about it. Open a
 [Suggest a skill](https://github.com/taylorarndt/taylors-skill-collection/issues/new?template=suggest_a_skill.yml)
 issue and say what it is, where it lives, and what it is helpful for.
 
-I will try it. A skill goes on this page after I have used it and kept using
-it, so everything listed here is something I can vouch for. If I add yours, you
-get the credit and the link goes to your repository.
+I will try it. A skill only goes on this page after I have used it and kept
+using it, because I want everything here to be something I can honestly vouch
+for. If I add yours, you get the credit and the link goes to your repository.
 
-If a link is broken or an install command has stopped working, open a
+Skills move and commands change, so if a link is broken or an install command
+has stopped working, I would like to know. Open a
 [Report a problem](https://github.com/taylorarndt/taylors-skill-collection/issues/new?template=report_a_problem.yml)
 issue or send a pull request.
 
@@ -361,7 +376,7 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ## More open-source projects
 
-If you want more open-source work, look at
+If you enjoyed this and want more open-source work, take a look at
 [Community Access](https://github.com/Community-Access), an organization that
 builds accessible, open-source software. Its website is
 [community-access.org](https://community-access.org). A few of its projects:
