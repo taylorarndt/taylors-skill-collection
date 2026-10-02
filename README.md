@@ -232,13 +232,44 @@ Install for Claude Code:
 npx skills add https://github.com/superwall/skills --skill wwdc --global --agent claude-code universal
 ```
 
-Install for Codex:
+The command above is the one Superwall publishes, and it is for Claude Code.
+For other tools, see the instructions in Superwall's repository.
+
+### In-app purchases
+
+#### RevenueCat AI Toolkit
+
+By RevenueCat. [RevenueCat/ai-toolkit](https://github.com/RevenueCat/ai-toolkit).
+RevenueCat is a great way to handle payments inside apps: purchases,
+subscriptions, and entitlements, without building the server side yourself.
+Their toolkit gives the agent skills for adding RevenueCat to an app on iOS,
+Android, Kotlin Multiplatform, Flutter, and React Native. It also connects the
+agent to your RevenueCat account, so it can set up products, entitlements, and
+offerings and read your revenue data.
+
+Install for Claude Code, from the terminal:
 
 ```
-npx skills add https://github.com/superwall/skills --skill wwdc
+claude plugins marketplace add RevenueCat/ai-toolkit
+claude plugins install revenuecat
 ```
 
-Then pick Codex when it asks which tools to install for.
+Install for Codex, from the terminal:
+
+```
+codex plugin marketplace add RevenueCat/ai-toolkit
+```
+
+Then start Codex, type `/plugins`, search for `revenuecat`, and install it. If
+it shows as not logged in, run:
+
+```
+codex mcp login RevenueCat
+```
+
+Both tools ask you to sign in to your RevenueCat account in the browser the
+first time. If you ship on Android, the same marketplace has a second plugin,
+`revenuecat-play-billing`, with deeper guidance on Google Play billing.
 
 ## Resources
 
@@ -256,6 +287,8 @@ Places to learn about skills and find more of them:
 - [Agent Skills](https://agentskills.io). The open format that all of these
   skills follow, which is why one skill works in several tools.
 - [wwdc.ai](https://wwdc.ai). Unofficial summaries of every WWDC session.
+- [RevenueCat AI Toolkit documentation](https://www.revenuecat.com/docs/tools/ai-toolkit).
+  RevenueCat's own guide to using their skills and tools with an agent.
 
 ## More open-source projects
 
