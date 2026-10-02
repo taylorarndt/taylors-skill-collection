@@ -54,3 +54,5 @@ the approach. Keep each pull request to one fix.
 I am blind and use a screen reader. Everything in this repository must make
 sense read aloud as plain text. Do not add emoji, decorative characters, or
 images without real alt text. Headings carry the structure.
+
+By contributing you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).

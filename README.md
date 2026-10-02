@@ -26,6 +26,8 @@ The skills are grouped by category. There are two kinds:
 - [Skills by category](#skills-by-category)
 - [Resources](#resources)
 - [Have a skill I should try](#have-a-skill-i-should-try)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
 - [More open-source projects](#more-open-source-projects)
 - [License](#license)
 
@@ -337,8 +339,22 @@ get the credit and the link goes to your repository.
 
 If a link is broken or an install command has stopped working, open a
 [Report a problem](https://github.com/taylorarndt/taylors-skill-collection/issues/new?template=report_a_problem.yml)
-issue or send a pull request. The details are in
-[CONTRIBUTING.md](CONTRIBUTING.md).
+issue or send a pull request.
+
+## Contributing
+
+Suggestions, problem reports, and pull requests are welcome. See
+[CONTRIBUTING.md](CONTRIBUTING.md), the [Code of Conduct](CODE_OF_CONDUCT.md),
+and [SUPPORT.md](SUPPORT.md). Report security problems privately as described
+in [SECURITY.md](SECURITY.md).
+
+## Contributors
+
+<a href="https://github.com/taylorarndt/taylors-skill-collection/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=taylorarndt/taylors-skill-collection" alt="Profile pictures of the people who have contributed to Taylor's Skill Collection" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
 
 ## More open-source projects
 
