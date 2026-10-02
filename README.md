@@ -29,6 +29,7 @@ I grouped the skills by category, and every one is marked as one of two kinds:
 - [Before you start](#before-you-start)
 - [Skills by category](#skills-by-category)
 - [Resources](#resources)
+- [Accessibility and documentation](#accessibility-and-documentation)
 - [Have a skill I should try](#have-a-skill-i-should-try)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -409,6 +410,32 @@ about skills and find more of them:
 - [wwdc.ai](https://wwdc.ai). Unofficial summaries of every WWDC session.
 - [RevenueCat AI Toolkit documentation](https://www.revenuecat.com/docs/tools/ai-toolkit).
   RevenueCat's own guide to using their skills and tools with an agent.
+
+## Accessibility and documentation
+
+These are not skills, but they matter to me. I am blind and I do all of this
+with a screen reader, so here is where the two companies document their tools
+and what they say about accessibility.
+
+Anthropic, who make Claude:
+
+- [Use Claude Code with a screen reader](https://code.claude.com/docs/en/accessibility).
+  The official page on screen reader mode, which swaps the visual terminal
+  interface for plain text read in order. You can turn it on for one session
+  with `claude --ax-screen-reader`.
+- [Use Claude Code CLI with a screen reader](https://support.claude.com/en/articles/15924927-use-claude-code-cli-with-a-screen-reader).
+  The same topic as a help center article.
+- [Claude Code documentation](https://code.claude.com/docs). Everything else
+  about Claude Code.
+
+OpenAI, who make Codex:
+
+- [Codex documentation](https://developers.openai.com/codex). The main
+  documentation for Codex.
+- I could not find a page from OpenAI about using Codex with a screen reader.
+  If you know of one, please
+  [tell me](https://github.com/taylorarndt/taylors-skill-collection/issues/new?template=report_a_problem.yml)
+  and I will add it.
 
 ## Have a skill I should try
 
