@@ -1,0 +1,49 @@
+name: Suggest a skill
+description: Tell me about a skill you think I should try
+labels: ["skill suggestion"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name of the skill
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link to the skill's repository
+      description: The author's own repository, not a copy.
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Who made it
+      description: Say so if it is yours. That is welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: helpful
+    attributes:
+      label: What it is helpful for
+      description: What does it help the agent do, and when would I reach for it?
+    validations:
+      required: true
+  - type: textarea
+    id: install
+    attributes:
+      label: How to install it
+      description: The commands for Claude Code, Codex, or both, if you know them.
+      render: shell
+    validations:
+      required: false
+  - type: dropdown
+    id: used
+    attributes:
+      label: Have you used it yourself
+      options:
+        - "Yes, I use it regularly"
+        - "Yes, I have tried it"
+        - "No, I have only read about it"
+    validations:
+      required: true

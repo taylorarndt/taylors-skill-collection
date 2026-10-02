@@ -1,4 +1,4 @@
-# My Skill Collection
+# Taylor's Skill Collection
 
 Welcome to my skill collection.
 
@@ -25,6 +25,7 @@ The skills are grouped by category. There are two kinds:
 - [Before you start](#before-you-start)
 - [Skills by category](#skills-by-category)
 - [Resources](#resources)
+- [Have a skill I should try](#have-a-skill-i-should-try)
 - [More open-source projects](#more-open-source-projects)
 - [License](#license)
 
@@ -82,19 +83,19 @@ sentences that make sense read aloud.
 Get the repository:
 
 ```
-git clone https://github.com/taylorarndt/my-skill-collection.git
+git clone https://github.com/taylorarndt/taylors-skill-collection.git
 ```
 
 Install for Claude Code:
 
 ```
-cp -R my-skill-collection/skills/opensource-project-init ~/.claude/skills/
+cp -R taylors-skill-collection/skills/opensource-project-init ~/.claude/skills/
 ```
 
 Install for Codex:
 
 ```
-cp -R my-skill-collection/skills/opensource-project-init ~/.codex/skills/
+cp -R taylors-skill-collection/skills/opensource-project-init ~/.codex/skills/
 ```
 
 The skill names me, my GitHub account, and my choices throughout. Read
@@ -322,6 +323,22 @@ Places to learn about skills and find more of them:
 - [wwdc.ai](https://wwdc.ai). Unofficial summaries of every WWDC session.
 - [RevenueCat AI Toolkit documentation](https://www.revenuecat.com/docs/tools/ai-toolkit).
   RevenueCat's own guide to using their skills and tools with an agent.
+
+## Have a skill I should try
+
+If you made a skill, or you use one you think I would like, tell me about it.
+Open a
+[Suggest a skill](https://github.com/taylorarndt/taylors-skill-collection/issues/new?template=suggest_a_skill.yml)
+issue and say what it is, where it lives, and what it is helpful for.
+
+I will try it. A skill goes on this page after I have used it and kept using
+it, so everything listed here is something I can vouch for. If I add yours, you
+get the credit and the link goes to your repository.
+
+If a link is broken or an install command has stopped working, open a
+[Report a problem](https://github.com/taylorarndt/taylors-skill-collection/issues/new?template=report_a_problem.yml)
+issue or send a pull request. The details are in
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## More open-source projects
 
