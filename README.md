@@ -235,6 +235,38 @@ npx skills add https://github.com/superwall/skills --skill wwdc --global --agent
 The command above is the one Superwall publishes, and it is for Claude Code.
 For other tools, see the instructions in Superwall's repository.
 
+### App Store Connect and releases
+
+#### ASC CLI skills
+
+By Rudrank Riyam and contributors.
+[app-store-connect-cli-skills](https://github.com/rorkai/app-store-connect-cli-skills),
+which now lives under the rorkai organization. Twenty-five skills for shipping
+apps with the [asc command line tool](https://github.com/rorkai/App-Store-Connect-CLI):
+builds, TestFlight, metadata and localization, screenshots, signing,
+submissions, pricing, crash triage, and Apple Ads. It is a community project
+and is not affiliated with Apple. The skills drive the `asc` tool, so install
+that first, following the instructions in its repository.
+
+Install for Claude Code, from the terminal:
+
+```
+claude plugin marketplace add rorkai/app-store-connect-cli-skills
+claude plugin install asc@rorkai
+```
+
+Install for Codex:
+
+```
+npx skills add rorkai/app-store-connect-cli-skills --agent codex
+```
+
+If you already have `asc`, this also works:
+
+```
+asc install-skills
+```
+
 ### In-app purchases
 
 #### RevenueCat AI Toolkit
