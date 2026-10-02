@@ -1,22 +1,23 @@
-# claude-skills
+# My Skill Collection
 
 Welcome to my skill collection.
+
+This repository has the skills I made and the skills from other people that I
+find useful. I use many of them every day. For each one, this page says who
+made it, what it is helpful for, and how to install it.
 
 A skill is a folder of instructions that an AI coding tool such as
 [Claude Code](https://claude.com/claude-code) or Codex loads when a task
 matches, so it does the job a particular way without being told again each
 time.
 
-This page lists the skills I use, grouped by category, with the commands to
-install each one. There are two kinds:
+The skills are grouped by category. There are two kinds:
 
 - **Mine.** Skills I wrote. They live in this repository, in the
   [skills](skills) folder.
 - **By someone else.** Skills other people wrote that I like and use. I do not
   copy them here. I link to the author's own repository, so you get their
   latest version and they get the credit.
-
-Every entry says who made it.
 
 ## Contents
 
@@ -81,19 +82,19 @@ sentences that make sense read aloud.
 Get the repository:
 
 ```
-git clone https://github.com/taylorarndt/claude-skills.git
+git clone https://github.com/taylorarndt/my-skill-collection.git
 ```
 
 Install for Claude Code:
 
 ```
-cp -R claude-skills/skills/opensource-project-init ~/.claude/skills/
+cp -R my-skill-collection/skills/opensource-project-init ~/.claude/skills/
 ```
 
 Install for Codex:
 
 ```
-cp -R claude-skills/skills/opensource-project-init ~/.codex/skills/
+cp -R my-skill-collection/skills/opensource-project-init ~/.codex/skills/
 ```
 
 The skill names me, my GitHub account, and my choices throughout. Read
