@@ -3,19 +3,29 @@
 Welcome to my skill collection.
 
 A skill is a folder of instructions that an AI coding tool such as
-[Claude Code](https://claude.com/claude-code) loads when a task matches, so it
-does the job a particular way without being told again each time.
+[Claude Code](https://claude.com/claude-code) or Codex loads when a task
+matches, so it does the job a particular way without being told again each
+time.
 
-This page lists the skills I use, grouped by category. There are two kinds:
+This page lists the skills I use, grouped by category, with the commands to
+install each one. There are two kinds:
 
 - **Mine.** Skills I wrote. They live in this repository, in the
   [skills](skills) folder.
 - **By someone else.** Skills other people wrote that I like and use. I do not
   copy them here. I link to the author's own repository, so you get their
-  latest version and they get the credit. Go to their repository to read the
-  skill, install it, and check its license.
+  latest version and they get the credit.
 
 Every entry says who made it.
+
+## Contents
+
+- [Why this exists](#why-this-exists)
+- [Before you start](#before-you-start)
+- [Skills by category](#skills-by-category)
+- [Resources](#resources)
+- [More open-source projects](#more-open-source-projects)
+- [License](#license)
 
 ## Why this exists
 
@@ -25,67 +35,33 @@ one request at a time, I wrote the steps down as a skill so the next project
 comes out the same. This repository is where my skills live, next to links to
 the skills from other people that I rely on, so it is all in one place.
 
+## Before you start
+
+Three things are true for every skill on this page:
+
+- **Where skills go.** Claude Code reads skills from `~/.claude/skills`. Codex
+  reads them from `~/.codex/skills`. Each skill is one folder with a
+  `SKILL.md` file inside it.
+- **Start a new session after installing.** The tool finds new skills when a
+  session starts.
+- **Commands that begin with `npx` need Node.** If you see
+  `npx: command not found`, install Node with `brew install node`. If `brew` is
+  not found either, install [Homebrew](https://brew.sh) first.
+
+The `npx skills add` command asks which tools to install for and whether to
+install for one project or all of them. Pick Claude Code, Codex, or both.
+
+Commands that begin with `/plugin` are typed inside Claude Code, not in the
+terminal.
+
 ## Skills by category
 
 ### Open source and GitHub
 
-- [opensource-project-init](skills/opensource-project-init). **Mine.** How I
-  take a folder of working code and turn it into an open-source repository on
-  GitHub, start to finish. More detail is under
-  [My skills](#my-skills) below.
+#### opensource-project-init
 
-### SwiftUI
-
-- [SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill).
-  By Paul Hudson. Guidance for writing SwiftUI.
-
-### Swift concurrency
-
-- [Swift-Concurrency-Agent-Skill](https://github.com/twostraws/Swift-Concurrency-Agent-Skill).
-  By Paul Hudson. Guidance for writing Swift concurrency code.
-
-### SwiftData
-
-- [SwiftData-Agent-Skill](https://github.com/twostraws/SwiftData-Agent-Skill).
-  By Paul Hudson. Guidance for working with SwiftData.
-
-### Testing
-
-- [Swift-Testing-Agent-Skill](https://github.com/twostraws/Swift-Testing-Agent-Skill).
-  By Paul Hudson. Guidance for writing tests with Swift Testing.
-
-### From Apple, built into Xcode
-
-- **Xcode's own skills.** By Apple. Xcode 27 ships with skills written by
-  Apple. They are not in a repository. They are inside Xcode, and one command
-  copies them out for other tools. See
-  [Getting Apple's skills out of Xcode](#getting-apples-skills-out-of-xcode)
-  below for the commands.
-
-### WWDC sessions
-
-- [wwdc](https://github.com/superwall/skills). By Superwall. One skill that
-  lets the agent look up any WWDC session. It reads summaries from
-  [wwdc.ai](https://wwdc.ai), an unofficial site with a summary of every
-  session. The summaries are written by AI, not by Apple, so treat them as a
-  way to find the right session and check details against Apple's own video.
-  Install it for Claude Code with:
-
-  ```
-  npx skills add https://github.com/superwall/skills --skill wwdc --global --agent claude-code universal
-  ```
-
-### Finding more skills
-
-- [Swift-Agent-Skills](https://github.com/twostraws/Swift-Agent-Skills).
-  By Paul Hudson. A curated directory of open-source skills for Swift and Apple
-  platform development, from many authors.
-
-## My skills
-
-### opensource-project-init
-
-It covers:
+**Mine.** How I take a folder of working code and turn it into an open-source
+repository on GitHub, start to finish. It covers:
 
 - A secrets scan and a `.gitignore` before anything is pushed
 - A private repository first, made public only on request
@@ -98,33 +74,129 @@ It covers:
   that was not tested by hand
 - Topics, private vulnerability reporting, and a tagged release
 
-The templates it copies from are in
-[skills/opensource-project-init/assets](skills/opensource-project-init/assets).
-
 I am blind and use a screen reader, and the skill is written around that: no
 emoji or decorative characters, real alt text on every image, and plain
 sentences that make sense read aloud.
 
-## Getting Apple's skills out of Xcode
+Get the repository:
 
-You need Xcode 27 installed and selected with `xcode-select`. The skills come
-out as ordinary skill folders, each with a `SKILL.md` file.
+```
+git clone https://github.com/taylorarndt/claude-skills.git
+```
 
-For Claude Code:
+Install for Claude Code:
+
+```
+cp -R claude-skills/skills/opensource-project-init ~/.claude/skills/
+```
+
+Install for Codex:
+
+```
+cp -R claude-skills/skills/opensource-project-init ~/.codex/skills/
+```
+
+The skill names me, my GitHub account, and my choices throughout. Read
+[SKILL.md](skills/opensource-project-init/SKILL.md) and change those to yours
+before you rely on it. The templates it copies from are in
+[skills/opensource-project-init/assets](skills/opensource-project-init/assets).
+
+### SwiftUI
+
+#### SwiftUI Pro
+
+By Paul Hudson.
+[SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill).
+Guidance for writing SwiftUI.
+
+Install for Claude Code or Codex:
+
+```
+npx skills add https://github.com/twostraws/swiftui-agent-skill --skill swiftui-pro
+```
+
+### Swift concurrency
+
+#### Swift Concurrency Pro
+
+By Paul Hudson.
+[Swift-Concurrency-Agent-Skill](https://github.com/twostraws/Swift-Concurrency-Agent-Skill).
+Guidance for writing Swift concurrency code.
+
+Install for Claude Code, typed inside Claude Code:
+
+```
+/plugin marketplace add twostraws/Swift-Concurrency-Agent-Skill
+/plugin install swift-concurrency-pro@swift-concurrency-agent-skill
+```
+
+Install for Codex:
+
+```
+npx skills add https://github.com/twostraws/swift-concurrency-agent-skill --skill swift-concurrency-pro
+```
+
+### SwiftData
+
+#### SwiftData Pro
+
+By Paul Hudson.
+[SwiftData-Agent-Skill](https://github.com/twostraws/SwiftData-Agent-Skill).
+Guidance for working with SwiftData.
+
+Install for Claude Code or Codex:
+
+```
+npx skills add https://github.com/twostraws/swiftdata-agent-skill --skill swiftdata-pro
+```
+
+### Testing
+
+#### Swift Testing Pro
+
+By Paul Hudson.
+[Swift-Testing-Agent-Skill](https://github.com/twostraws/Swift-Testing-Agent-Skill).
+Guidance for writing tests with Swift Testing.
+
+Install for Claude Code, typed inside Claude Code:
+
+```
+/plugin marketplace add twostraws/Swift-Testing-Agent-Skill
+/plugin install swift-testing-pro@swift-testing-agent-skill
+```
+
+Install for Codex:
+
+```
+npx skills add https://github.com/twostraws/swift-testing-agent-skill --skill swift-testing-pro
+```
+
+### From Apple, built into Xcode
+
+#### Xcode's own skills
+
+By Apple. Xcode 27 ships with skills written by Apple. They are not in a
+repository. They are inside Xcode, and one command copies them out as ordinary
+skill folders. You need Xcode 27 installed and selected with `xcode-select`.
+
+Install for Claude Code:
 
 ```
 xcrun agent skills export --output-dir ~/.claude/skills
 ```
 
-For Codex:
+Install for Codex:
 
 ```
 xcrun agent skills export --output-dir ~/.codex/skills
 ```
 
 After an Xcode update, run the same command again with `--replace-existing`
-added to the end, so the newer versions overwrite the old ones. Start a new
-session in Claude Code or Codex afterwards so it picks the skills up.
+added to the end, so the newer versions overwrite the old ones:
+
+```
+xcrun agent skills export --output-dir ~/.claude/skills --replace-existing
+```
 
 With Xcode 27.0 the export gives ten skills:
 
@@ -144,21 +216,61 @@ With Xcode 27.0 the export gives ten skills:
 These belong to Apple, so I do not copy them into this repository. Export them
 from your own copy of Xcode.
 
-## Using one of my skills
+### WWDC sessions
 
-Copy the skill's folder into your Claude Code skills folder:
+#### wwdc
+
+By Superwall. [superwall/skills](https://github.com/superwall/skills). One
+skill that lets the agent look up any WWDC session. It reads summaries from
+[wwdc.ai](https://wwdc.ai), an unofficial site with a summary of every session.
+The summaries are written by AI, not by Apple, so use them to find the right
+session and check details against Apple's own video.
+
+Install for Claude Code:
 
 ```
-git clone https://github.com/taylorarndt/claude-skills.git
-cp -R claude-skills/skills/opensource-project-init ~/.claude/skills/
+npx skills add https://github.com/superwall/skills --skill wwdc --global --agent claude-code universal
 ```
 
-Claude Code picks it up in the next session. The skill names me, my GitHub
-account, and my choices throughout, so read `SKILL.md` and change those to
-yours before you rely on it.
+Install for Codex:
 
-For a skill by someone else, follow the install steps in that author's
-repository.
+```
+npx skills add https://github.com/superwall/skills --skill wwdc
+```
+
+Then pick Codex when it asks which tools to install for.
+
+## Resources
+
+Places to learn about skills and find more of them:
+
+- [Swift-Agent-Skills](https://github.com/twostraws/Swift-Agent-Skills). By
+  Paul Hudson. A curated directory of open-source skills for Swift and Apple
+  platform development, from many authors.
+- [skills.sh](https://skills.sh). A directory of skills that install with the
+  `npx skills add` command used on this page.
+- [Claude Code skills documentation](https://code.claude.com/docs/en/skills).
+  How skills work in Claude Code and how to write your own.
+- [Codex skills documentation](https://developers.openai.com/codex/skills). The
+  same for Codex.
+- [Agent Skills](https://agentskills.io). The open format that all of these
+  skills follow, which is why one skill works in several tools.
+- [wwdc.ai](https://wwdc.ai). Unofficial summaries of every WWDC session.
+
+## More open-source projects
+
+If you want more open-source work, look at
+[Community Access](https://github.com/Community-Access), an organization that
+builds accessible, open-source software. Its website is
+[community-access.org](https://community-access.org). A few of its projects:
+
+- [accessibility-agents](https://github.com/Community-Access/accessibility-agents).
+  Accessibility review agents for Claude Code, GitHub Copilot, and Claude
+  Desktop, so AI coding tools stop producing inaccessible code.
+- [quill](https://github.com/Community-Access/quill). A screen-reader-first
+  writing and document environment for Windows.
+- [git-going-with-github](https://github.com/Community-Access/git-going-with-github).
+  An accessible workshop on Git, GitHub, and open source.
 
 ## License
 
