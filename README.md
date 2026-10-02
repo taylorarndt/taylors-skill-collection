@@ -12,8 +12,8 @@ try it too.
 
 If skills are new to you: a skill is a folder of instructions that an AI
 coding tool such as [Claude Code](https://claude.com/claude-code) or Codex
-picks up when a task matches. It is how you teach the tool to do a job your
-way once, instead of explaining it again every time.
+picks up when a task matches. You teach the tool how you want a job done
+once, instead of listing the same five or ten steps every time.
 
 I grouped the skills by category, and every one is marked as one of two kinds:
 
@@ -42,9 +42,9 @@ a good place to point people, so I made one.
 
 It is also where my own skills live. I wrote my first one after setting up
 [claude-watch](https://github.com/taylorarndt/claude-watch) by hand, one
-request at a time. I was tired of explaining the same steps to Claude for every
-new project, so I wrote them down as a skill, and now the next project comes
-out the same without me repeating myself.
+request at a time. Instead of telling my agents "do these five or ten things"
+every time I make a new project, I wrote those things down once as a skill.
+Now the next project comes out the same without me repeating myself.
 
 Most of what I use was made by other people, though, and I want to be clear
 about that. Good skills take real work. This page is my way of sharing what
