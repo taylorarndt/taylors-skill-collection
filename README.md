@@ -121,7 +121,7 @@ and my choices throughout. Read
 before you rely on it. The templates it copies from are in
 [skills/opensource-project-init/assets](skills/opensource-project-init/assets).
 
-### Mac maintenance
+### Mac and virtual machines
 
 #### mac-storage-cleanup
 
@@ -170,6 +170,46 @@ cp -R taylors-skill-collection/skills/mac-storage-cleanup ~/.codex/skills/
 It is written for macOS and was tested on macOS 27 with Xcode 27 and
 CleanMyMac CLI 1.0.0. Read [SKILL.md](skills/mac-storage-cleanup/SKILL.md)
 before you rely on it.
+
+#### parallels-desktop
+
+**Mine.** I run Windows 11 in Parallels with NVDA, and every week or two the
+sound would just stop. With no sound, my screen reader goes silent, and the VM
+is useless to me. After another evening lost to it, I tracked it down with
+Claude: it's a known Parallels 27 bug on macOS 27 that breaks VM audio on
+Bluetooth headphones. Then we built a fix that stays fixed. This skill holds
+that fix and everything else I do with Parallels.
+
+Like my cleanup skill, it does the digging itself and asks me short questions
+instead of handing me homework. It covers:
+
+- Creating VMs: Windows 11, Linux, and macOS, sized to fit the Mac
+- Tuning profiles: game mode, battery, development, and accessibility
+- Setting up a screen reader inside the VM, including Parallels' accessibility
+  keyboard mode and Caps Lock as the NVDA key on a Mac keyboard
+- Snapshots, shared folders, and running commands inside Windows from the Mac
+- Troubleshooting, mainly audio: getting speech back right away, the fix for
+  the Parallels 27 Bluetooth bug, and a Windows task that keeps it applied
+  after updates
+
+It asks before it stops or restarts a running VM, because you might be working
+in it, and it never changes your Claude Code settings or permissions.
+
+Install for Claude Code:
+
+```
+cp -R taylors-skill-collection/skills/parallels-desktop ~/.claude/skills/
+```
+
+Install for Codex:
+
+```
+cp -R taylors-skill-collection/skills/parallels-desktop ~/.codex/skills/
+```
+
+It needs Parallels Desktop Pro or Business for the `prlctl` command. It was
+tested with Parallels Desktop 27.0.2 on macOS 27 with a Windows 11 ARM VM.
+Read [SKILL.md](skills/parallels-desktop/SKILL.md) before you rely on it.
 
 ### All the Swift skills in one place
 
