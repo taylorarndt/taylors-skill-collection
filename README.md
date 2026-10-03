@@ -121,6 +121,56 @@ and my choices throughout. Read
 before you rely on it. The templates it copies from are in
 [skills/opensource-project-init/assets](skills/opensource-project-init/assets).
 
+### Mac maintenance
+
+#### mac-storage-cleanup
+
+**Mine.** I wrote this one after my MacBook Air got down to 15 GB free on a
+926 GB drive. Between AI model caches, Xcode, simulators, and build folders
+that coding agents left behind, my disk was full and everything felt slow. By
+the end of one session I had 361 GB free, and nothing I needed was gone.
+
+The skill works like an assistant, not a report. It does the digging itself,
+then asks me a few short questions with sizes and plain explanations, such as
+"Old iOS 26.5 simulators, 24 GB, Xcode can download them again." All I do is
+pick. It covers:
+
+- A read-only check of disk, memory, and swap, explained in plain words
+- Caches, AI model caches, runaway logs, old installers, duplicate Xcodes,
+  DerivedData, iOS DeviceSupport, simulators, and simulator runtimes
+- Build folders that Claude Code and Codex leave in `/private/tmp`
+- Care with Xcode: it looks inside anything a cleaner calls "junk" before
+  deleting, so the projects and simulators I'm using stay
+- MacPaw's official
+  [CleanMyMac CLI](https://github.com/MacPaw/cleanmymac-cli) for developer
+  caches and AI tool junk, and the CleanMyMac app for a malware check
+- A final report that includes what I could do better, so the storage crisis
+  doesn't come back
+
+It never changes your settings or permissions. The checking part works in any
+mode. Deleting files needs Claude Code's manual mode so you approve each step,
+and the skill tells you that at the start and again right before it cleans.
+
+I am blind and use VoiceOver, so the skill reports in short sentences and
+lists, without tables or emoji. It also knows how to work around VoiceOver's
+overlay when it drives the CleanMyMac app.
+
+Install for Claude Code:
+
+```
+cp -R taylors-skill-collection/skills/mac-storage-cleanup ~/.claude/skills/
+```
+
+Install for Codex:
+
+```
+cp -R taylors-skill-collection/skills/mac-storage-cleanup ~/.codex/skills/
+```
+
+It is written for macOS and was tested on macOS 27 with Xcode 27 and
+CleanMyMac CLI 1.0.0. Read [SKILL.md](skills/mac-storage-cleanup/SKILL.md)
+before you rely on it.
+
 ### All the Swift skills in one place
 
 #### Swift Agent Skills
