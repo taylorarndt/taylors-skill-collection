@@ -27,6 +27,7 @@ I grouped the skills by category, and every one is marked as one of two kinds:
 
 - [Why this exists](#why-this-exists)
 - [Before you start](#before-you-start)
+- [Clean up after yourself](#clean-up-after-yourself)
 - [Skills by category](#skills-by-category)
 - [Resources](#resources)
 - [Accessibility and documentation](#accessibility-and-documentation)
@@ -71,6 +72,32 @@ install for one project or all of them. Pick Claude Code, Codex, or both.
 
 Commands that begin with `/plugin` are typed inside Claude Code, not in the
 terminal.
+
+## Clean up after yourself
+
+**Mine.** This isn't a skill. It's a short set of rules I give every agent I
+use, in every session.
+
+Why I made it: I kept finding Claude, Codex, and other agents working in
+obscure places on my Mac, such as `/private/tmp`, and never cleaning up after
+themselves. One of them went on for a month, collecting logs in folders I
+didn't even know existed. Together with build folders left in temp locations,
+that filled my disk and slowed everything down.
+
+What I wanted: an agent that leaves my Mac the way it found it. If it opens an
+app, starts a server, boots a simulator, or begins a log capture, it stops it
+when the job is done. If it really has to use a temp folder, it tells me why
+and where, and it cleans up afterwards. Nothing should keep running in a
+corner I don't know about.
+
+The rules are in
+[rules/clean-up-after-yourself.md](rules/clean-up-after-yourself.md). To use
+them, copy the text into the global instructions file of each tool:
+
+- Claude Code: `~/.claude/CLAUDE.md`
+- Codex: `~/.codex/AGENTS.md`
+
+They're short on purpose, so they get followed instead of skimmed.
 
 ## Skills by category
 
@@ -130,6 +157,13 @@ before you rely on it. The templates it copies from are in
 that coding agents left behind, my disk was full and everything felt slow. By
 the end of one session I had 361 GB free, and nothing I needed was gone.
 
+What I wanted: a skill that cleans up my storage safely, explains what's
+taking the space in plain words, and leaves me with habits that keep the
+crisis from coming back. I also wanted it to run
+[CleanMyMac](https://macpaw.com/cleanmymac) for me. CleanMyMac is MacPaw's
+Mac cleaner, and it also checks for malware. The skill uses its official
+command-line tool and can drive the app too.
+
 The skill works like an assistant, not a report. It does the digging itself,
 then asks me a few short questions with sizes and plain explanations, such as
 "Old iOS 26.5 simulators, 24 GB, Xcode can download them again." All I do is
@@ -179,6 +213,11 @@ is useless to me. After another evening lost to it, I tracked it down with
 Claude: it's a known Parallels 27 bug on macOS 27 that breaks VM audio on
 Bluetooth headphones. Then we built a fix that stays fixed. This skill holds
 that fix and everything else I do with Parallels.
+
+What I wanted: an assistant that controls my virtual machine for me. It
+should create and set up VMs, tune them for whatever I'm doing, keep my screen
+reader working inside them, and fix things when they break, without me
+spending another evening on it.
 
 Like my cleanup skill, it does the digging itself and asks me short questions
 instead of handing me homework. It covers:
